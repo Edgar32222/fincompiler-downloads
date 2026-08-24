@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Download FinCompiler
+    url: https://github.com/Edgar32222/fincompiler-downloads/releases
+    about: Use the Releases page for official downloads and checksums.
