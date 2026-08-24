@@ -1,0 +1,64 @@
+name: Report a problem
+description: Report a reproducible issue without sharing confidential finance data.
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing FinCompiler. Do not attach real workbooks, customer data, credentials or unredacted screenshots.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: 0.6.0-alpha.1
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Where did it happen?
+      options:
+        - Download or startup
+        - File import
+        - Mapping review
+        - Reconciliation
+        - Budget vs Actual or PVM
+        - Currency or exchange rate
+        - Management Pack or export
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Use the synthetic demo or anonymized field names.
+      placeholder: "1. Opened...\n2. Selected...\n3. Saw..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result and visible error
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed company, customer, account and financial information from this report.
+          required: true
